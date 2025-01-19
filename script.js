@@ -7,8 +7,6 @@ const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
 const hmmButton = document.querySelector(".btn--hmm");
 const continueButton = document.querySelector(".btn--goon");
-const catImg = document.querySelector(".cat-img");
-const hmmImg = document.querySelector(".hmm-img");
 const secondaryContainer = document.querySelector(".secondary-container");
 const startingContainer = document.querySelector(".starting-container");
 
@@ -72,10 +70,6 @@ function generateMessage(noCount) {
 
     const messageIndex = Math.min(noCount, messages.length - 1);
     return messages[messageIndex];
-}
-
-function changeImage(image) {
-    catImg.src = `img/cat-${image}.jpg`;
 }
 
 function updateTitleText() {
