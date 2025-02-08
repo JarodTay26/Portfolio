@@ -32,7 +32,7 @@
 }
 
 .container {
-     max-width: 1170px;
+     max-width: 100%;
 }
 
 html {
@@ -266,20 +266,36 @@ button {
 }
 
 .read_more {
-     font-size: 17px;
-     background-color: #db341e;
-     color: #fff;
-     line-height: 64px;
-     width: 100%;
-     max-width: 229px;
-     text-align: center;
-     display: inline-block;
-     transition: ease-in all 0.5s;
+     float: left;
+     font-size: 25px;
+     background-color: #1d0e08;
+     color: #faf9e9;
+     line-height: 80px;
+     width: auto;
+     padding: 40px 40px;
+     justify-content: center;
+     align-items: center;
+     display: flex;
      font-weight: bold;
-     border-radius: 0;
-     border: inherit;
-     height: 64px;
+     height: 100px;
      text-transform: uppercase;
+     margin-top: 40px;
+     margin-right: 50px;
+     border-radius: 20px;
+     transform: rotate(0.25deg);
+     position: relative;
+}
+
+.read_more::before {
+     content: "";
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     right: 15px;
+     bottom: 15px;
+     border: 3px dashed #faf9e9; /* Creates the inner border */
+     border-radius: 10px;
+     pointer-events: none; /* Ensures it doesn't interfere with text selection */
 }
 
 .read_more:hover {
@@ -331,7 +347,7 @@ ul.infomaco {
 }
 
 ul.infomaco li {
-     color: #fff;
+     color: #faf9e9;
      padding-right: 25px;
      display: flex;
      align-items: center;
@@ -345,25 +361,26 @@ ul.infomaco li:last-child {
 
 ul.infomaco li i {
      padding-right: 10px;
-     color: #fff;
+     color: #faf9e9;
 }
 
 ul.infomaco li a {
-     color: #fff;
+     color: #faf9e9;
 }
 
 .navigation.navbar {
-     float: left;
-     padding: 0;
+     display: flex;
+     flex-direction: column;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
-     padding: 50px 23px 10px 23px;
-     color: #fff;
-     font-size: 14px;
-     line-height: 15px;
+     padding: 10px 23px 10px 23px;
+     color: #faf9e9;
+     font-size: 30px;
+     line-height: 50px;
      font-weight: bold;
      text-transform: uppercase;
+     text-align: center;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
@@ -389,12 +406,12 @@ ul.infomaco li a {
 /** banner section **/
 
 .full_bg {
-     background-image: linear-gradient(to right, #4e3910 92.5%, #faf9e9 7.5%);
+     background-color: #4e3910;
      width: 100%;
-     height: 100%;
-     padding-top: 7.5%;
+     height: auto;
+     padding-top: 5%;
      padding-bottom: 10%;
-     position: fixed;
+     position: absolute;
      z-index: 1;
 }
 
@@ -435,7 +452,7 @@ ul.infomaco li a {
      border: 5px dashed #faf9e9; /* Creates the inner border */
      border-radius: 15px;
      pointer-events: none; /* Ensures it doesn't interfere with text selection */
- }
+}
 
 .coff_img {
      padding-right: 70px;
@@ -443,33 +460,22 @@ ul.infomaco li a {
 
 .zon_text h1 {
      text-align: left;
-     font-size: 100px;
-     line-height: 120px;
+     font-size: 60px;
+     line-height: 80px;
      color: #faf9e9;
      font-weight: bold;
-     padding-bottom: 5px;
+     padding-bottom: 40px;
      padding-left: 5px;
      text-transform: uppercase;
 }
 
 .zon_text h2 {
      text-align: left;
-     font-size: 25px;
-     line-height: 30px;
-     color: #faf9e9;
-     font-weight: 400;
-     padding-bottom: 60px;
-     padding-left: 5px;
-     text-transform: uppercase;
-}
-
-.zon_text h3 {
-     text-align: left;
-     font-size: 25px;
+     font-size: 30px;
      line-height: 35px;
      color: #faf9e9;
      font-weight: 600;
-     padding-bottom: 40px;
+     padding-bottom: 10px;
      padding-left: 5px;
      text-transform: uppercase;
 }
@@ -482,7 +488,7 @@ ul.infomaco li a {
      color: #faf9e9;
      font-weight: 400;
      padding-left: 5px;
-     padding-bottom: 30px;
+     padding-bottom: 20px;
 }
 
 .zon_text .read_more {
