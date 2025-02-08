@@ -327,6 +327,7 @@ ul.infomaco {
      display: flex;
      justify-content: flex-start;
      flex-wrap: wrap;
+     padding-left: 7.5px;
 }
 
 ul.infomaco li {
@@ -388,10 +389,10 @@ ul.infomaco li a {
 /** banner section **/
 
 .full_bg {
-     background-image: linear-gradient(to right, #4e3910 90%, #fdfbd4 10%);
+     background-image: linear-gradient(to right, #4e3910 92.5%, #faf9e9 7.5%);
      width: 100%;
      height: 100%;
-     padding-top: 10%;
+     padding-top: 7.5%;
      padding-bottom: 10%;
      position: fixed;
      z-index: 1;
@@ -414,9 +415,27 @@ ul.infomaco li a {
 }
 
 .zon_text {
-     max-width: 1000px;
+     max-width: 1250px;
      float: right;
+     background-color: #1d0e08;
+     padding: 75px;
+     border-radius: 25px;
+     box-shadow: 5px 7.5px 15px rgba(0, 0, 0, 0.6);
+     transform: rotate(-0.25deg);
+     position: relative;
 }
+
+.zon_text::before {
+     content: "";
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     right: 30px;
+     bottom: 30px;
+     border: 5px dashed #faf9e9; /* Creates the inner border */
+     border-radius: 15px;
+     pointer-events: none; /* Ensures it doesn't interfere with text selection */
+ }
 
 .coff_img {
      padding-right: 70px;
@@ -426,9 +445,10 @@ ul.infomaco li a {
      text-align: left;
      font-size: 100px;
      line-height: 120px;
-     color: #fff;
+     color: #faf9e9;
      font-weight: bold;
      padding-bottom: 5px;
+     padding-left: 5px;
      text-transform: uppercase;
 }
 
@@ -436,9 +456,10 @@ ul.infomaco li a {
      text-align: left;
      font-size: 25px;
      line-height: 30px;
-     color: #fff;
+     color: #faf9e9;
      font-weight: 400;
      padding-bottom: 60px;
+     padding-left: 5px;
      text-transform: uppercase;
 }
 
@@ -446,9 +467,10 @@ ul.infomaco li a {
      text-align: left;
      font-size: 25px;
      line-height: 35px;
-     color: #fff;
+     color: #faf9e9;
      font-weight: 600;
      padding-bottom: 40px;
+     padding-left: 5px;
      text-transform: uppercase;
 }
 
@@ -457,8 +479,9 @@ ul.infomaco li a {
      padding: 0;
      font-size: 20px;
      line-height: 30px;
-     color: #fff;
+     color: #faf9e9;
      font-weight: 400;
+     padding-left: 5px;
      padding-bottom: 30px;
 }
 
