@@ -409,7 +409,7 @@ ul.infomaco li a {
      background-color: #4e3910;
      width: 100%;
      height: auto;
-     padding-top: 5%;
+     padding-top: 6%;
      padding-bottom: 10%;
      position: absolute;
      z-index: 1;
@@ -431,9 +431,23 @@ ul.infomaco li a {
      animation-delay: 3s;
 }
 
+/* Default margin for large screens */
+.custom-margin {
+     margin-left: 160px;
+}
+ 
+/* Automatically adjust margin for smaller screens */
+@media (max-width: 1200px) {
+.custom-margin {
+     margin-left: auto;
+     margin-right: auto;
+     }
+}
+ 
+
 .zon_text {
      max-width: 1250px;
-     float: right;
+     float: left;
      background-color: #1d0e08;
      padding: 75px;
      border-radius: 25px;
@@ -492,7 +506,6 @@ ul.infomaco li a {
 }
 
 .zon_text .read_more {
-     max-width: 200px;
      float: left;
      margin-right: 10px;
 }
