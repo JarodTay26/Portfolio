@@ -272,7 +272,7 @@ button {
      color: #faf9e9;
      line-height: 80px;
      width: auto;
-     padding: 40px 40px;
+     padding: 50px 50px;
      justify-content: center;
      align-items: center;
      display: flex;
@@ -282,6 +282,7 @@ button {
      margin-top: 40px;
      margin-right: 50px;
      border-radius: 20px;
+     box-shadow: 5px 7.5px 15px rgba(0, 0, 0, 0.6);
      transform: rotate(0.25deg);
      position: relative;
 }
@@ -506,6 +507,7 @@ ul.infomaco li a {
 }
 
 .zon_text .read_more {
+     max-width: 200px;
      float: left;
      margin-right: 10px;
 }
