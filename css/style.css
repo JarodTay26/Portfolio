@@ -265,19 +265,57 @@ button {
      flex-wrap: wrap;
 }
 
+.cover_button {
+     float: left;
+     font-size: 25px;
+     background-color: #1d0e08;
+     color: #faf9e9;
+     width: auto;
+     height: auto;
+     padding: 30px 50px;
+     justify-content: center;
+     align-items: center;
+     display: flex;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-top: 40px;
+     margin-right: 50px;
+     border-radius: 20px;
+     box-shadow: 5px 7.5px 15px rgba(0, 0, 0, 0.6);
+     transform: rotate(0.25deg);
+     position: relative;
+}
+
+.cover_button::before {
+     content: "";
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     right: 15px;
+     bottom: 15px;
+     border: 3px dashed #faf9e9; /* Creates the inner border */
+     border-radius: 10px;
+     pointer-events: none; /* Ensures it doesn't interfere with text selection */
+}
+
+.cover_button:hover {
+     background: #000000;
+     color: #faf9e9;
+     transition: ease-in all 0.5s;
+}
+
 .read_more {
      float: left;
      font-size: 25px;
      background-color: #1d0e08;
      color: #faf9e9;
-     line-height: 80px;
      width: auto;
-     padding: 50px 50px;
+     height: auto;
+     padding: 30px 50px;
      justify-content: center;
      align-items: center;
      display: flex;
      font-weight: bold;
-     height: 100px;
      text-transform: uppercase;
      margin-top: 40px;
      margin-right: 50px;
@@ -301,7 +339,7 @@ button {
 
 .read_more:hover {
      background: #000000;
-     color: #fff;
+     color: #faf9e9;
      transition: ease-in all 0.5s;
 }
 
