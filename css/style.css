@@ -27,6 +27,14 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
+.flush-right{
+     float: right;
+}
+
+.flush-left{
+     float: left;
+}
+
 * {
      box-sizing: border-box !important;
 }
@@ -265,10 +273,9 @@ button {
      flex-wrap: wrap;
 }
 
-.cover_button {
-     float: left;
+.nav_button {
      font-size: 25px;
-     background-color: #1d0e08;
+     background-color: #2c220f;
      color: #faf9e9;
      width: auto;
      height: auto;
@@ -279,14 +286,24 @@ button {
      font-weight: bold;
      text-transform: uppercase;
      margin-top: 40px;
-     margin-right: 50px;
      border-radius: 20px;
      box-shadow: 5px 7.5px 15px rgba(0, 0, 0, 0.6);
-     transform: rotate(0.25deg);
      position: relative;
 }
 
-.cover_button::before {
+.nav_button.rotate-right{
+     transform: rotate(0.25deg);
+}
+
+.nav_button.rotate-left{
+     transform: rotate(-0.25deg);
+}
+
+.nav_button.right-spacing{
+     margin-right: 50px;
+}
+
+.nav_button::before {
      content: "";
      position: absolute;
      top: 15px;
@@ -298,10 +315,22 @@ button {
      pointer-events: none; /* Ensures it doesn't interfere with text selection */
 }
 
-.cover_button:hover {
+.nav_button:hover {
      background: #000000;
      color: #faf9e9;
      transition: ease-in all 0.5s;
+}
+
+.nav_button i {
+     font-size: 30px;
+}
+
+.right {
+     margin-right: 15px;
+}
+
+.left {
+     margin-left: 15px;
 }
 
 .read_more {
@@ -444,11 +473,21 @@ ul.infomaco li a {
 
 /** banner section **/
 
-.full_bg {
-     background-color: #4e3910;
+.frontcover_bg {
+     background-color: #664c19;
+     width: 100%;
+     height: 100%;
+     padding-top: 6%;
+     padding-bottom: 10%;
+     position: absolute;
+     z-index: 1;
+}
+
+.backcover_bg {
+     background-color: #664c19;
      width: 100%;
      height: auto;
-     padding-top: 6%;
+     padding-top: 2%;
      padding-bottom: 10%;
      position: absolute;
      z-index: 1;
@@ -481,10 +520,23 @@ ul.infomaco li a {
      margin-left: auto;
      margin-right: auto;
      }
+} 
+
+/* Default margin for large screens */
+.custom-margin2 {
+     margin-left: 50px;
+     margin-right: 50px;
 }
  
+/* Automatically adjust margin for smaller screens */
+@media (max-width: 1200px) {
+.custom-margin2 {
+     margin-left: auto;
+     margin-right: auto;
+     }
+}
 
-.zon_text {
+.cover_page_text {
      max-width: 1250px;
      float: left;
      background-color: #1d0e08;
@@ -495,7 +547,7 @@ ul.infomaco li a {
      position: relative;
 }
 
-.zon_text::before {
+.cover_page_text::before {
      content: "";
      position: absolute;
      top: 30px;
@@ -511,7 +563,7 @@ ul.infomaco li a {
      padding-right: 70px;
 }
 
-.zon_text h1 {
+.cover_page_text h1 {
      text-align: left;
      font-size: 60px;
      line-height: 80px;
@@ -522,7 +574,7 @@ ul.infomaco li a {
      text-transform: uppercase;
 }
 
-.zon_text h2 {
+.cover_page_text h2 {
      text-align: left;
      font-size: 30px;
      line-height: 35px;
@@ -533,7 +585,7 @@ ul.infomaco li a {
      text-transform: uppercase;
 }
 
-.zon_text p {
+.cover_page_text p {
      text-align: left;
      padding: 0;
      font-size: 20px;
@@ -544,24 +596,16 @@ ul.infomaco li a {
      padding-bottom: 20px;
 }
 
-.zon_text .read_more {
-     max-width: 200px;
-     float: left;
-     margin-right: 10px;
-}
-
-.zon_text .btn-primary.focus,
-.btn-primary {
-     padding: 0;
-}
-
-.zon_text .btn-primary.focus,
-.btn-primary:focus {
-     box-shadow: inherit;
-}
-
-.zon_text .carousel-caption button {
-     margin-top: 0;
+.cover_page_text i {
+     text-align: left;
+     font-size: 30px;
+     line-height: 35px;
+     color: #faf9e9;
+     font-weight: 600;
+     padding-bottom: 10px;
+     padding-right: 15px;
+     margin-left: 7.5px;
+     text-transform: uppercase;
 }
 
 .coff_img figure {
@@ -666,102 +710,6 @@ ul.infomaco li a {
 
 
 /** end about section **/
-
-
-/** service **/
-
-.service {
-     background: #1f1d47;
-     border-left: #fff solid 20px;
-     padding-bottom: 98px;
-     padding-top: 80px;
-}
-
-.service .titlepage {
-     padding-bottom: 40px;
-}
-
-.service .titlepage p {
-     line-height: 30px;
-     color: #fff;
-     padding-top: 15px;
-}
-
-.service_box {
-     margin-bottom: 50px;
-}
-
-.ser_img {
-     background: #fff;
-     padding: 50px;
-     border-radius: 10px;
-}
-
-.ser_img figure {
-     margin: 0;
-}
-
-.ser_img figure img {
-     max-width: 100%;
-}
-
-.service_box h3 {
-     color: #fff;
-     font-size: 30px;
-     font-weight: bold;
-     padding-top: 50px;
-}
-
-.service_box p {
-     padding-top: 10px;
-     color: #fff;
-     line-height: 30px;
-}
-
-.owl-item.active.center {
-     transform: scale(1) !important;
-}
-
-.owl-item.active.center .ser_img {
-     background: #db3620;
-}
-
-.owl-item.active {
-     transform: scale(.8) !important;
-}
-
-.owl-carousel .owl-nav.disabled {
-     display: inherit !important;
-     position: absolute;
-     left: -15px !important;
-     top: 84%;
-}
-
-.owl-nav.disabled .owl-prev {
-     left: 0 !important;
-     position: absolute !important;
-     top: 108% !important;
-}
-
-.owl-nav.disabled .owl-prev,
-.owl-nav.disabled .owl-next {
-     width: 89px;
-     height: 89px;
-     background-color: #ffffff !important;
-     color: #000000;
-     font-size: 60px !important;
-     line-height: 30px !important;
-     opacity: 1;
-}
-
-.service .read_more {
-     margin: 0 auto;
-     display: block;
-}
-
-
-/** end service **/
-
 
 /** section blue_bg **/
 
@@ -1171,132 +1119,22 @@ ul.conta li a {
 
 /**  inner page css **/
 
-.inner_page .header {
-     background: #1f1c45;
-     padding-bottom: 44px;
+.cover_page .header {
+     background: #664c19;
+     padding-bottom: 20px;
      position: inherit;
 }
 
-.inner_page .contact {
+.cover_page .contact {
      padding-right: 0;
      border: inherit;
 }
 
-.inner_page .about,
-.inner_page .service {
+.cover_page .about,
+.cover_page .service {
      border-top: #fff solid 20px !important;
 }
 
-.inner_page .testimonial .titlepage {
+.cover_page .testimonial .titlepage {
      text-align: center;
 }
-
-
-/** blog **/
-
-.blog {
-     background: #1f1d47;
-     padding-top: 75px;
-     padding-bottom: 80px;
-     border: #fff solid 20px;
-     border-bottom: inherit !important;
-     border-left: inherit !important;
-}
-
-.blog .titlepage p {
-     line-height: 30px;
-     color: #fff;
-     padding-top: 15px;
-}
-
-.whitebg {
-     color: #fff;
-}
-
-.blog-box {
-     background: #fff;
-     margin-bottom: 30px;
-}
-
-.blog-box figure {
-     margin: 0;
-     background: #fff;
-     transition: ease-in all 0.4s;
-     overflow: hidden;
-     position: relative;
-}
-
-.blog-box figure img {
-     width: 100%;
-     -webkit-transition: 0.4s ease;
-     transition: 0.4s ease;
-}
-
-.blog-box figure img:hover {
-     opacity: 0.7;
-     transition: ease-in all 0.4s;
-     -webkit-transform: scale(1.08);
-     transform: scale(1.08);
-}
-
-.blog_text {
-     padding: 30px 20px;
-}
-
-.blog_text h3 {
-     color: #000;
-     font-size: 20px;
-     font-weight: bold;
-     padding-bottom: 15px;
-}
-
-.comment {
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
-}
-
-.comment a i {
-     padding-right: 10px;
-}
-
-.comment a {
-     color: #000;
-     font-size: 16px;
-     font-weight: 500;
-}
-
-.comment a:hover {
-     color: #02306f;
-}
-
-.blog_text p {
-     margin-top: 15px;
-     padding-top: 15px;
-     border-top: #02306f solid 1px;
-}
-
-.date {
-     padding: 16px 17px;
-     position: absolute;
-     bottom: 0px;
-     background: #02306f;
-     left: 0;
-     right: 0;
-     width: 203px;
-     margin: 0 auto;
-     text-align: center;
-     border-radius: 31px;
-     transition: 0.4s ease;
-}
-
-.date h3 {
-     color: #fff;
-     font-size: 19px;
-     font-weight: 500;
-     text-transform: uppercase;
-     line-height: 18px;
-}
-
-
-/** end blog **/
